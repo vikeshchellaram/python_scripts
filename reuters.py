@@ -48,3 +48,4 @@ def reuters_sign_in(path):
     pyautogui.click()
     
     pyautogui.moveTo(currentMouseX, currentMouseY)
+    
