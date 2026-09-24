@@ -28,6 +28,7 @@ The repository reflects practical applications of Python to automate repetitive 
 - **Microsoft Outlook**
 - **PyAutoGUI**
 - **Windows COM automation**
+- **yfinance**
 
 ## Projects
 
@@ -90,6 +91,13 @@ The script is designed to reduce manual operational work and support repeatable 
 
 A lightweight utility for generating random passwords using Python's standard library.
 
+### `screening_and_metrics.py`
+Reusable functions for:
+- Negative-industry screening
+- Sector-average valuation metrics
+- Beta-based stock classification
+- Effective number of holdings using inverse HHI
+
 ## Why This Repository?
 
 These projects demonstrate how Python can be applied beyond pure software development to solve **business and operational problems**.
@@ -104,4 +112,4 @@ The projects are developed from a financial markets and business analysis perspe
 
 ## Disclaimer
 
-The scripts are provided for educational and demonstration purposes. Some examples are designed for specific enterprise environments and may require adaptation before use in other environments.
+The modules are provided for educational and analytical purposes only and do not constitute investment advice.
