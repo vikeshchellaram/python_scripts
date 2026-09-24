@@ -15,11 +15,9 @@ import cx_Oracle
 import warnings
 
 
-
 def store_password(msg='Password: '):
     password = pwinput.pwinput(msg)
     return password
-
 
 
 def read_credentials_from_ini(ini_path, section):
@@ -44,7 +42,6 @@ def read_credentials_from_ini(ini_path, section):
     return username, password
 
 
-
 def read_file(file,name_of_sheet=0):
     try:
         if isinstance(file,str) ==True:
@@ -60,7 +57,6 @@ def read_file(file,name_of_sheet=0):
     return df
 
 
-
 def log(logfile, log_file_name):
     logging.basicConfig(level=logging.INFO, filename=os.path.join(logfile,log_file_name), filemode='a',
                         format='[%(filename)s] - %(levelname)s [%(asctime)s]: %(message)s',
@@ -69,7 +65,6 @@ def log(logfile, log_file_name):
     logger.setLevel(logging.DEBUG)
  
     return logger
-
 
 
 class text_analysis(object):
@@ -95,10 +90,8 @@ class text_analysis(object):
             return 0
 
 
-
 def boxplot(x, y, data):
     sns.boxplot(x, y, data)
-    
     
     
 def scatterplot(df, x, y):
@@ -110,13 +103,11 @@ def scatterplot(df, x, y):
     plt.pyplot.xlabel(x.name)
     plt.pyplot.ylabel(y.name)
     
-   
     
 def heatmap(df, cmap="RdBu"):
     plt.pyplot.pcolor(df, cmap=cmap)
     plt.pyplot.colorbar()
     plt.pyplot.show()
-
 
 
 def binning(x, df):
@@ -129,7 +120,6 @@ def binning(x, df):
     plt.pyplot.title(f"{x.capitalize()} per bin")
 
 
-
 def fred_data(user_input):
     fred = Fred(api_key='')
     series = fred.get_series(user_input)
@@ -140,7 +130,6 @@ def fred_data(user_input):
     
     print (series.tail())
     return series
-
 
 
 def forecasting(data):
@@ -160,7 +149,6 @@ def forecasting(data):
     df2 = df2.merge(data, on='ds', how='left')
 
 
-
 def oracle_connection(query, file):
 
     id = pd.read_excel(os.path.join(os.getcwd(), file), header=None)
@@ -171,8 +159,5 @@ def oracle_connection(query, file):
             warnings.simplefilter("ignore")
             df = pd.read_sql(sql=query, con=connection)
     return df
-
-
-
 
 
