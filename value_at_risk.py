@@ -162,3 +162,4 @@ def value_at_risk(tickers, weights, capital, period="5y", confidence_levels=(0.9
             "normalized_weights": weights,
             "prices": prices}
 
+                    
