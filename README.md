@@ -29,6 +29,7 @@ The repository reflects practical applications of Python to automate repetitive 
 - **PyAutoGUI**
 - **Windows COM automation**
 - **yfinance**
+- **SciPy**
 
 ## Projects
 
