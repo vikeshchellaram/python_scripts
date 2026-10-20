@@ -93,11 +93,30 @@ The script is designed to reduce manual operational work and support repeatable 
 A lightweight utility for generating random passwords using Python's standard library.
 
 ### `screening_and_metrics.py`
+
 Reusable functions for:
 - Negative-industry screening
 - Sector-average valuation metrics
 - Beta-based stock classification
 - Effective number of holdings using inverse HHI
+
+### `value_at_risk.py`
+
+A quantitative risk analysis tool for measuring potential portfolio losses using historical market data.
+
+The script calculates Value at Risk (VaR) and Conditional Value at Risk (CVaR) for stock portfolios using historical price data retrieved through yfinance.
+
+Features include:
+- Historical VaR at configurable confidence levels, including 95% and 99%
+- Parametric VaR based on the assumption of normally distributed portfolio returns
+- Historical CVaR (Expected Shortfall) to estimate the average loss in the tail of the return distribution
+- Portfolio return calculation based on user-defined stock weights
+- Automatic portfolio weight normalization
+- Historical price data retrieval and data availability checks
+- Portfolio risk reporting in monetary terms
+- Configurable historical analysis periods and adjusted-price settings
+
+The script provides a reusable framework for assessing portfolio downside risk and comparing risk estimates under different confidence levels and methodologies.
 
 ## Why This Repository?
 
